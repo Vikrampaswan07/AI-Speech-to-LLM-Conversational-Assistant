@@ -16,7 +16,7 @@ st.set_page_config(page_title="🗣️ AI Voice Assistant", layout="centered")
 
 # === CONFIG ===
 # SECURITY: don't hard-code keys in source; use secrets or env vars
-GROQ_API_KEY = st.secrets.get("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") or os.getenv("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", "")
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY", "")
 MODEL = "llama-3.1-8b-instant"
 
 if not GROQ_API_KEY:
